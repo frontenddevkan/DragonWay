@@ -27,20 +27,33 @@ body
         height: 234px
         margin-left: 48px
 
-.popup
-    display: block
-
+.wrapper
     width: 2800px
     height: 760px
+    position: relative
 
+.popup
+    width: 2800px
+    height: 760px
     position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+
+    opacity: 0
+    animation: mypopup 1s ease-out forwards
 
     background-color: rgba(52, 53, 65, 0.82)
     z-index: 10
     border-radius: 65px
+
+
+    @keyframes mypopup
+        0%
+            opacity: 0
+            transform: translate(0px, 0px) scale(0.2)
+        100%
+            opacity: 1
+            transform: translate(2800px, 760px) scale(1)
+
+
     &__text
         margin: 25px
         font-family: 'Jura', comic-sans
@@ -54,9 +67,8 @@ body
         overflow-wrap: break-word
 
 
-
-
 .typing-text
+
     width: 2000px
     height: 376px
 
@@ -71,9 +83,3 @@ body
 
 
 
-
-
-
-
-// .popup
-// .typing-text
