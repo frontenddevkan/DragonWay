@@ -11,7 +11,8 @@ body {
   height: 100vh;
   background-position: center center;
   background-repeat: no-repeat;
-  font-family: "Jura";
+  font-family: "Jura", comic-sans;
+  color: #FFFFFF;
 }
 
 .container {
@@ -49,7 +50,7 @@ body {
   width: 2500px;
   height: 760px;
   opacity: 0;
-  animation: mypopup 1s ease-out forwards;
+  animation: mypopup 3s ease-out 1s forwards;
   background-color: rgba(52, 53, 65, 0.82);
   z-index: 10;
   border-radius: 64px;
@@ -57,19 +58,17 @@ body {
 @keyframes mypopup {
   0% {
     opacity: 0;
-    transform: translate(0px, 0px) scale(0.2);
+    transform: scale(0.2);
   }
   100% {
     opacity: 1;
-    transform: translate(2800px, 760px) scale(1);
+    transform: scale(1);
   }
 }
 .popup__text {
   margin: 25px;
-  font-family: "Jura", comic-sans;
   font-weight: 500;
   font-size: 100px;
-  color: #FFFFFF;
   font-style: normal;
   vertical-align: center;
   text-align: center;
