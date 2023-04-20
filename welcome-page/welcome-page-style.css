@@ -49,15 +49,15 @@ body {
   padding: 20px;
 }
 
-.popup {
-  width: 70%;
-  height: 60vh;
+.frame {
+  max-width: 2800px;
+  max-height: 1700px;
   display: none;
   background-color: rgba(52, 53, 65, 0.82);
-  z-index: 10;
+  z-index: 20;
   border-radius: 64px;
   border: solid 4px rgba(249, 31, 64, 0.5490196078);
-  animation: flicker 1s ease-out 5s forwards;
+  animation: 1s ease-out 5s forwards;
 }
 @keyframes flicker {
   0% {
@@ -70,7 +70,7 @@ body {
     display: block;
   }
 }
-.popup__typing-text {
+.frame__typing-text {
   width: 2000px;
   height: 376px;
   background-color: #444654;
@@ -114,7 +114,7 @@ body {
     width: 100%;
   }
 }
-.popup__text {
+.frame__text {
   margin: 25px;
   font-weight: 500;
   font-size: 100px;
