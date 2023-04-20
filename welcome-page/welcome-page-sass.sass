@@ -1,10 +1,12 @@
 @font-face
     font-family: "Jura"
 
+*
+    box-sizing: border-box
 
 body
     height: 100vh
-    width: 3000px
+    margin: 0px
 
     display: flex
     flex-direction: column
@@ -12,7 +14,7 @@ body
 
     background-image: url(../img/welcome-background.svg)
     background-size: cover
-    height: 100vh
+
     background-position: center center
     background-repeat: no-repeat
 
@@ -42,85 +44,63 @@ body
 
 /************** main **************/
 
-.main
-    width: 100%
 
-
-.wrapper
-    width: 3000px
-    height: 760px
-    position: relative
-    padding: 20px
 
 .frame
-    max-width: 2800px
-    max-height: 1700px
-    display: none
+    width: 2800px
+    height: 1700px
+    display: block
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    z-index: 20
+    opasity: 0
 
     background-color: rgba(52, 53, 65, 0.82)
-    z-index: 20
     border-radius: 64px
-    border: solid 4px #f91f408c
+    border: solid 3px #f91f408c
 
-    animation:  1s ease-out 5s forwards
+    animation: expand 4s ease-in-out
 
-    @keyframes flicker
+
+    @keyframes expand
         0%
-            display: none
+            width: 0
+            height: 0
+
         50%
-            display: block
+            width: 2800px
+            height: 100px
         100%
-            display: block
-
-
-    &__typing-text
-        width: 2000px
-        height: 376px
-
-        background-color: #444654
-        z-index: 20
-        border-radius: 33px
-        border: solid 3px #f83955ae
-
-        animation: typing 10s linear infinite
-
-        @keyframes typing
-            0%
-                width: 0
-            10%
-                width: 10%
-            20%
-                width: 20%
-            30%
-                width: 30%
-            40%
-                width: 40%
-            50%
-                width: 50%
-            60%
-                width: 60%
-            70%
-                width: 70%
-            80%
-                width: 80%
-            90%
-                width: 90%
-            100%
-                width: 100%
+            width: 2800px
+            height: 1700px
 
 
 
-    &__text
-        margin: 25px
 
-        font-weight: 500
-        font-size: 100px
+    // &__typing-text
+    //     width: 2000px
+    //     height: 376px
 
-        font-style: normal
-        vertical-align: center
-        text-align: center
+    //     background-color: #444654
+    //     z-index: 20
+    //     border-radius: 33px
+    //     border: solid 3px #f83955ae
 
-        overflow-wrap: break-word
+
+
+    // &__text
+    //     margin: 25px
+
+    //     font-weight: 500
+    //     font-size: 100px
+
+    //     font-style: normal
+    //     vertical-align: center
+    //     text-align: center
+
+    //     overflow-wrap: break-word
 
 
 /************** footer ***************/

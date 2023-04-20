@@ -44,8 +44,7 @@ first: if (personalMovieDB.count < 10) {
 
     };
 
-    continue first
-
+   
 
 
 console.log(numberOfFilms);
