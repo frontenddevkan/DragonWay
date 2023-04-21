@@ -1,0 +1,264 @@
+/* Document
+ * ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ */
+
+::(html) {
+  1.15: 1.15; /* 1 */
+}
+
+/* Sections
+ * ========================================================================== */
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+
+::(h1) {
+  2 : :em;
+  0.67 : :em;
+  0.67 : :em;
+}
+
+/* Grouping content
+ * ========================================================================== */
+
+/**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */
+
+::(dl, ol, ul) :where(dl, ol, ul) {
+  0: 0;
+  0: 0;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Correct the inheritance of border color in Firefox.
+ */
+
+::(hr) {
+  :: content-box; /* 1 */
+  ::; /* 2 */
+  0: 0; /* 1 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+::(pre) {
+  ::, monospace; /* 1 */
+  1 : :em; /* 2 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+
+/**
+ * Add the correct text decoration in Safari.
+ */
+
+::(abbr[]) {
+  ::;
+  :: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+::(b, strong) {
+  :: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+::(code, kbd, samp) {
+  ::, monospace; /* 1 */
+  1 : :em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+::(small) {
+  80% :%;
+}
+
+/* Tabular data
+ * ========================================================================== */
+
+/**
+ * 1. Correct table border color in Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+
+::(table) {
+  :: currentColor; /* 1 */
+  0: 0; /* 2 */
+}
+
+/* Forms
+ * ========================================================================== */
+
+/**
+ * Remove the margin on controls in Safari.
+ */
+
+::(button, input, select) {
+  0: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+
+::(button) {
+  :: none;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+
+::(button, input:is([type="button" i], [type="reset" i], [type="submit" i])) {
+  :: button;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+
+::(progress) {
+  :: baseline;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+
+::(select) {
+  :: none;
+}
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+
+::(textarea) {
+  0: 0;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+::(input [type="search" i]) {
+  :: textfield; /* 1 */
+  -2 : :px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+
+:where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+
+::(button, input:is([type="button" i], [type ="color" i], [type="reset" i], [type ="submit" i]))::-moz-focusring {
+  1 : :px dotted ButtonText;
+}
+
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+
+::(:-moz-ui-invalid) {
+  :: none;
+}
+
+/* Interactive
+ * ========================================================================== */
+
+/*
+ * Add the correct styles in Safari.
+ */
+
+::(dialog) {
+  :: white;
+  ::;
+  :: black;
+  :: -moz-fit-content;
+  :: fit-content;
+  0: 0;
+  :: auto;
+  1 : :em;
+  ::;
+  0: 0;
+  :: -moz-fit-content;
+  :: fit-content;
+}
+
+::(dialog:not([open])) {
+  ::;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+::(summary) {
+  :: list-item;
+}
