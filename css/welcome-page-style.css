@@ -51,10 +51,12 @@ body {
   transform: translate(-50%, -50%);
   z-index: 20;
   opasity: 0;
+  padding: 50px 50px;
   background-color: rgba(52, 53, 65, 0.82);
-  border-radius: 64px;
+  border-radius: 90px;
   border: solid 3px rgba(249, 31, 64, 0.5490196078);
-  animation: expand 4s ease-in-out 5s;
+  animation-delay: 6s;
+  animation: expand 4s ease-in-out;
 }
 @keyframes expand {
   0% {
@@ -77,6 +79,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
+  gap: 50px;
 }
 
 .items {
@@ -86,12 +89,24 @@ body {
 .frame__circles {
   width: 700px;
   height: 700px;
-  border-radius: 35px;
+  position: relative;
+  border-radius: 50%;
   background-color: #444654;
   z-index: 40;
-  opasity: 0;
-  padding: 20px;
-  border: solid 3px rgba(248, 57, 85, 0.6823529412);
+  text-align: center;
+  padding: 30%;
+  border: 10px solid gradient(220deg, #f91f40, #444654, #ffffff);
+  font-size: 50px;
+  animation: spin 20s linear infinite;
+  animation-delay: 4s;
+}
+@keyframes : spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /************** footer ***************/
