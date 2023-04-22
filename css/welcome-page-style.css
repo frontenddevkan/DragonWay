@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   font-family: "Jura", comic-sans;
   color: #FFFFFF;
-  border: solid 3px rgba(249, 31, 64, 0.5490196078);
 }
 
 .container {
@@ -71,21 +70,28 @@ body {
     height: 1700px;
   }
 }
+
 .frame__list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  text-align: center;
 }
+
+.items {
+  list-style: none;
+}
+
 .frame__circles {
   width: 700px;
   height: 700px;
-  border-radius: 45deg;
+  border-radius: 35px;
   background-color: #444654;
   z-index: 40;
   opasity: 0;
-  list-style: none;
-  text-align: center;
+  padding: 20px;
+  border: solid 3px rgba(248, 57, 85, 0.6823529412);
 }
 
 /************** footer ***************/
