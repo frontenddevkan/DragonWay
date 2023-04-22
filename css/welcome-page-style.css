@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Jura", comic-sans;
   color: #FFFFFF;
+  border: solid 3px rgba(249, 31, 64, 0.5490196078);
 }
 
 .container {
@@ -54,7 +55,7 @@ body {
   background-color: rgba(52, 53, 65, 0.82);
   border-radius: 64px;
   border: solid 3px rgba(249, 31, 64, 0.5490196078);
-  animation: expand 4s ease-in-out;
+  animation: expand 4s ease-in-out 5s;
 }
 @keyframes expand {
   0% {
@@ -69,6 +70,22 @@ body {
     width: 2800px;
     height: 1700px;
   }
+}
+.frame__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.frame__circles {
+  width: 700px;
+  height: 700px;
+  border-radius: 45deg;
+  background-color: #444654;
+  z-index: 40;
+  opasity: 0;
+  list-style: none;
+  text-align: center;
 }
 
 /************** footer ***************/
