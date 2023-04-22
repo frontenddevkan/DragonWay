@@ -65,7 +65,9 @@ body
     border-radius: 90px
     border: solid 3px #f91f408c
 
-    animation: expand 4s ease-in-out 5s
+    animation-delay: 6s
+    animation: expand 4s ease-in-out
+
 
 
     @keyframes expand
@@ -93,18 +95,25 @@ body
 .frame__circles
     width: 700px
     height: 700px
-
+    position: relative
     border-radius: 50%
     background-color: #444654
     z-index: 40
-    opasity: 0
+
     text-align: center
     padding: 30%
-    border: solid 10px #f83955ae
+    border: 10px solid gradient(220deg, #f91f40,#444654,#ffffff)
+
     font-size: 50px
 
+    animation: spin 20s linear infinite
+    animation-delay: 4s
 
-
+    @keyframes: spin
+        from
+            transform: rotate(0deg)
+        to
+          transform: rotate(360deg)
 
 
 
