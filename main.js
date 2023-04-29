@@ -18,14 +18,28 @@ function rememberMyFilms() {
 
 rememberMyFilms();
 
-
-function showMyDB (privat) {
-    if (privat === false) {
-        console.log("main object");
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log('You are watched a lot of movies!');
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log('You are cool watcher!');
+    } else if (personalMovieDB.count >= 30) {
+        console.log('You are movie-maniac');
     } else {
+        console.log('error! error!');
+    }
+    }
 
+    detectPersonalLevel();
+
+function showMyDB (hidden) {
+        if (!hidden) {
+        console.log(personalMovieDB);
     }
 }
+
+showMyDB(personalMovieDB.privat);
+
 
 function whiteYourGenres() {
     for (let i=0; i < 4; i++) {
