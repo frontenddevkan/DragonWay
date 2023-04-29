@@ -18,6 +18,23 @@ function rememberMyFilms() {
 
 rememberMyFilms();
 
+function start() {
+    numberOfFilms = +prompt ('How much movies did you watch?', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('How much movies did you watch?', '');
+    }
+}
+
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    genres: [],
+    privat: false
+};
+
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
         console.log('You are watched a lot of movies!');
@@ -42,7 +59,10 @@ showMyDB(personalMovieDB.privat);
 
 
 function whiteYourGenres() {
-    for (let i=0; i < 4; i++) {
-        prompt('Ваш любимый жанр под номером ${')
+    for (let i=1; i < 4; i++) {
+        const genre = prompt('Ваш любимый жанр под номером ${i}');
+        personalMovieDB.genres[i - 1] = genre;
     }
 }
+
+whiteYourGenres();
