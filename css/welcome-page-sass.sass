@@ -59,22 +59,24 @@ body
     transform: translate(-50%,-50%)
     z-index: 20
     padding: 180px 70px
-
+    opacity: 0
     background-color: rgba(52, 53, 65, 0.82)
     border-radius: 90px
     border: solid 3px #f91f408c
 
     animation-delay: 6s
-    animation: expand 4s ease-in
+    animation: expand 4s ease-in-out
 
 
 
     @keyframes expand
         0%
+            opacity: 1
             width: 0
             height: 0
 
         50%
+
             width: 2800px
             height: 100px
         100%
@@ -107,7 +109,7 @@ body
     flex-wrap: wrap
     text-align: center
     gap: 100px
-    opasity: 0
+    opacity: 0
     position: relative
 
 
@@ -125,7 +127,7 @@ body
     padding: 30%
     border: 10px dashed #f91f408c
     box-shadow: 0 0 26px #f91f408c
-
+    opacity: 0
     font-size: 50px
 
     animation: spin 8s linear forwards
@@ -133,6 +135,7 @@ body
 
     @keyframes spin
         0%
+            opacity: 1
             clip-path: inset(100%)
             transform: rotate(0deg)
 
