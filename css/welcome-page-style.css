@@ -150,14 +150,15 @@ body {
   height: 110px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .wrapper-footer {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .copyright {
@@ -167,7 +168,6 @@ body {
   width: 250px;
   height: 50px;
   font: 400 20px;
-  margin-left: 0px;
 }
 
 .copyright__icon-mail {
@@ -209,7 +209,10 @@ p {
   flex-direction: row;
   justify-content: flex-start;
   font-size: 50px;
-  passint-top: 20px;
+}
+
+.icon-github {
+  margin: 0;
 }
 
 /*# sourceMappingURL=welcome-page-style.css.map */
