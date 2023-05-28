@@ -115,7 +115,7 @@ body header, body footer, body main {
   height: 100px;
   margin: 0;
   color: #FFFFFF;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .img-footer {
@@ -191,4 +191,4 @@ p {
   margin: 0;
 }
 
-/*# sourceMappingURL=welcome-page-style.css.map */
+/*# sourceMappingURL=welcome-page.style.css.map */
