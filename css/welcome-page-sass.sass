@@ -40,9 +40,13 @@ body
         font-size: 100%
         vertical-align: baseline
         background: transparent
+
         // h1 {font-size: 1rem}
         // h2 {font-size: 1,5rem}
         // h3, h4, h5, h6 {font-size: 0,8rem}
+    &:hover
+        border-bottom: 2px solid #f91f408c
+        transition: all 0.2
 
     header, footer, main
         width: 100%
@@ -61,6 +65,7 @@ body
     display: flex
     flex-direction: row
     justify-content: flex-start
+    flex-grow: 1
 
     margin-top: 81px
     margin-left: 96px
@@ -87,42 +92,42 @@ body
     border-radius: 90px
     border: solid 3px #f91f408c
 
-    animation-delay: 6s
-    animation: expand 4s ease-in-out
+    // animation-delay: 6s
+    // animation: expand 4s ease-in-out
 
 
 
-    @keyframes expand
-        0%
+    // @keyframes expand
+    //     0%
 
-            width: 0
-            height: 0
+    //         width: 0
+    //         height: 0
 
-        50%
+    //     50%
 
-            width: 2800px
-            height: 100px
-        100%
-            width: 2800px
-            height: 1700px
+    //         width: 2800px
+    //         height: 100px
+    //     100%
+    //         width: 2800px
+    //         height: 1700px
 
-    &__list-wrapper
-        width: 100%
-        height: 100%
+    // &__list-wrapper
+    //     width: 100%
+    //     height: 100%
 
-        animation-delay: 8s
-        animation: wrapper 4s ease-in forwards
+    //     animation-delay: 8s
+    //     animation: wrapper 4s ease-in forwards
 
-        @keyframes wrapper
-            0%
+    //     @keyframes wrapper
+    //         0%
 
-                width: 0%
-                height: 0%
+    //             width: 0%
+    //             height: 0%
 
-            100%
+    //         100%
 
-                width: 100%
-                height: 100%
+    //             width: 100%
+    //             height: 100%
 
 
 .frame__list
@@ -133,7 +138,7 @@ body
     text-align: center
     gap: 100px
     position: relative
-
+    flex-grow: 2
 
 
 .items
@@ -150,34 +155,35 @@ body
     border: 10px dashed #f91f408c
     box-shadow: 0 0 26px #f91f408c
 
-    font-size: 50px
+    font-size: 2rem
+    line-height: 1
 
-    animation: spin 8s linear forwards
-
-
-    @keyframes spin
-        0%
-            clip-path: inset(100%)
-            transform: rotate(0deg)
+    // animation: spin 8s linear forwards
 
 
-        100%
+    // @keyframes spin
+    //     0%
+    //         clip-path: inset(100%)
+    //         transform: rotate(0deg)
 
-            transform: rotate(360deg)
-            border: 4px solid #f91f408c
+
+    //     100%
+
+    //         transform: rotate(360deg)
+    //         border: 4px solid #f91f408c
 
 
 
-.exersices:hover, .results:hover, .trackers:hover, .more:hover, .goals:hover, .plans:hover
-    animation: hoverspin 1s linear infinite
+// .exersices:hover, .results:hover, .trackers:hover, .more:hover, .goals:hover, .plans:hover
+//     animation: hoverspin 1s linear infinite
 
-    @keyframes hoverspin
-            0%
-                transform: rotate(0deg)
+//     @keyframes hoverspin
+//             0%
+//                 transform: rotate(0deg)
 
-            100%
-                transform: rotate(360deg)
-                border: 4px solid #f91f408c
+//             100%
+//                 transform: rotate(360deg)
+//                 border: 4px solid #f91f408c
 
 
 // .goals:hover
@@ -231,7 +237,8 @@ body
     height: 100px
     margin: 0
     color: #FFFFFF
-    font-size: 1.5rem
+    font-size: 3rem
+
 
 
 
@@ -254,7 +261,7 @@ body
     flex-direction: row
     justify-content: space-between
     gap: 100px
-
+    flex-grow: 0
 .copyright
     display: flex
     flex-direction: row

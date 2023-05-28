@@ -15,8 +15,34 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  font-family: "Jura", comic-sans;
+  font-family: "Jura", sans-serif;
+  font-size: 10px;
+  line-height: 1;
   color: #FFFFFF;
+}
+body blockquote, body q {
+  quotes: none;
+}
+body nav ul {
+  list-style: none;
+}
+body blockquote:before, body blockquote:after, body q:before, body q:after {
+  content: "";
+}
+body a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body:hover {
+  border-bottom: 2px solid rgba(249, 31, 64, 0.5490196078);
+  transition: all 0.2;
+}
+body header, body footer, body main {
+  width: 100%;
 }
 
 .container {
@@ -31,6 +57,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-grow: 1;
   margin-top: 81px;
   margin-left: 96px;
 }
@@ -53,38 +80,6 @@ body {
   background-color: rgba(52, 53, 65, 0.82);
   border-radius: 90px;
   border: solid 3px rgba(249, 31, 64, 0.5490196078);
-  animation-delay: 6s;
-  animation: expand 4s ease-in-out;
-}
-@keyframes expand {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  50% {
-    width: 2800px;
-    height: 100px;
-  }
-  100% {
-    width: 2800px;
-    height: 1700px;
-  }
-}
-.frame__list-wrapper {
-  width: 100%;
-  height: 100%;
-  animation-delay: 8s;
-  animation: wrapper 4s ease-in forwards;
-}
-@keyframes wrapper {
-  0% {
-    width: 0%;
-    height: 0%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .frame__list {
@@ -95,6 +90,7 @@ body {
   text-align: center;
   gap: 100px;
   position: relative;
+  flex-grow: 2;
 }
 
 .items {
@@ -110,31 +106,8 @@ body {
   padding: 30%;
   border: 10px dashed rgba(249, 31, 64, 0.5490196078);
   box-shadow: 0 0 26px rgba(249, 31, 64, 0.5490196078);
-  font-size: 50px;
-  animation: spin 8s linear forwards;
-}
-@keyframes spin {
-  0% {
-    clip-path: inset(100%);
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    border: 4px solid rgba(249, 31, 64, 0.5490196078);
-  }
-}
-
-.exersices:hover, .results:hover, .trackers:hover, .more:hover, .goals:hover, .plans:hover {
-  animation: hoverspin 1s linear infinite;
-}
-@keyframes hoverspin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    border: 4px solid rgba(249, 31, 64, 0.5490196078);
-  }
+  font-size: 2rem;
+  line-height: 1;
 }
 
 /************** footer ***************/
@@ -142,7 +115,7 @@ body {
   height: 100px;
   margin: 0;
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 3rem;
 }
 
 .img-footer {
@@ -155,10 +128,15 @@ body {
 
 .wrapper-footer {
   width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 3000px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 100px;
+  flex-grow: 0;
 }
 
 .copyright {
@@ -167,7 +145,6 @@ body {
   justify-content: flex-start;
   width: 250px;
   height: 50px;
-  font: 400 20px;
 }
 
 .copyright__icon-mail {
@@ -208,7 +185,6 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  font-size: 50px;
 }
 
 .icon-github {
