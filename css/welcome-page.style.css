@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Jura";
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../img/background/welcome-background.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: "Jura", comic-sans;
+  color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /*********** header ********************/
+}
+
+.logo {
+  width: 313px;
+  height: 338px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 81px;
+  margin-left: 96px;
+}
+.logo__text {
+  width: 418px;
+  height: 252px;
+  margin-left: 48px;
+}
+
+/************** main **************/
+.frame {
+  width: 2800px;
+  height: 1700px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  padding: 180px 70px;
+  background-color: rgba(52, 53, 65, 0.82);
+  border-radius: 90px;
+  border: solid 3px rgba(249, 31, 64, 0.5490196078);
+  animation-delay: 6s;
+  animation: expand 4s ease-in-out;
+}
+@keyframes expand {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 2800px;
+    height: 100px;
+  }
+  100% {
+    width: 2800px;
+    height: 1700px;
+  }
+}
+.frame__list-wrapper {
+  width: 100%;
+  height: 100%;
+  animation-delay: 8s;
+  animation: wrapper 4s ease-in forwards;
+}
+@keyframes wrapper {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.frame__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 100px;
+  position: relative;
+}
+
+.items {
+  list-style: none;
+}
+
+.frame__circles {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: #444654;
+  text-align: center;
+  padding: 30%;
+  border: 10px dashed rgba(249, 31, 64, 0.5490196078);
+  box-shadow: 0 0 26px rgba(249, 31, 64, 0.5490196078);
+  font-size: 50px;
+  animation: spin 8s linear forwards;
+}
+@keyframes spin {
+  0% {
+    clip-path: inset(100%);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    border: 4px solid rgba(249, 31, 64, 0.5490196078);
+  }
+}
+
+.exersices:hover, .results:hover, .trackers:hover, .more:hover, .goals:hover, .plans:hover {
+  animation: hoverspin 1s linear infinite;
+}
+@keyframes hoverspin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    border: 4px solid rgba(249, 31, 64, 0.5490196078);
+  }
+}
+
+/************** footer ***************/
+.footer {
+  height: 100px;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.img-footer {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wrapper-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 250px;
+  height: 50px;
+  font: 400 10px;
+}
+
+.copyright__icon-mail {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+
+.email-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.email-dev {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 15px;
+}
+
+p {
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.github-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 20px;
+}
+
+.icon-github {
+  margin: 0;
+}
+
+/*# sourceMappingURL=welcome-page.style.css.map */
