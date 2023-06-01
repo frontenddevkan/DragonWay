@@ -7,4 +7,4 @@ This project help you to organize your workout activity.
 - preprocessor SASS;
 - html, css;
 - flex, BEM,
-- pop-up,
+
