@@ -4,6 +4,13 @@
 *
     box-sizing: border-box
 
+a
+    margin: 0px
+
+p
+    margin: 0px
+
+
 body
     height: 100vh
     margin: 0px
@@ -44,9 +51,7 @@ body
         // h1 {font-size: 1rem}
         // h2 {font-size: 1,5rem}
         // h3, h4, h5, h6 {font-size: 0,8rem}
-    &:hover
-        border-bottom: 2px solid #f91f408c
-        transition: all 0.2
+
 
     header, footer, main
         width: 100%
@@ -61,14 +66,17 @@ body
 .logo
     width: 313px
     height: 338px
+    position: fixed
+    top: 0
+    left: 0
 
     display: flex
     flex-direction: row
     justify-content: flex-start
-    flex-grow: 1
 
     margin-top: 81px
     margin-left: 96px
+
     &__text
         width: 418px
         height: 252px
@@ -76,26 +84,22 @@ body
 
 /************** main **************/
 
-
-
 .frame
     width: 2800px
-    height: 1700px
+    height: 1100px
 
     position: fixed
     top: 50%
     left: 50%
     transform: translate(-50%,-50%)
     z-index: 20
-    padding: 180px 70px
+    padding: 100px
     background-color: rgba(52, 53, 65, 0.82)
     border-radius: 90px
     border: solid 3px #f91f408c
 
     // animation-delay: 6s
     // animation: expand 4s ease-in-out
-
-
 
     // @keyframes expand
     //     0%
@@ -111,9 +115,9 @@ body
     //         width: 2800px
     //         height: 1700px
 
-    // &__list-wrapper
-    //     width: 100%
-    //     height: 100%
+    &__list-wrapper
+        width: 100%
+        height: 100%
 
     //     animation-delay: 8s
     //     animation: wrapper 4s ease-in forwards
@@ -134,29 +138,32 @@ body
     display: flex
     flex-direction: row
     justify-content: space-around
-    flex-wrap: wrap
-    text-align: center
-    gap: 100px
-    position: relative
-    flex-grow: 2
+    align-content: center
+    align-items: center
+
 
 
 .items
         list-style: none
 
 .frame__circles
-    width: 600px
-    height: 600px
+
+    width: 700px
+    height: 700px
     border-radius: 50%
     background-color: #444654
 
-    text-align: center
-    padding: 30%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
     border: 10px dashed #f91f408c
     box-shadow: 0 0 26px #f91f408c
-
-    font-size: 2rem
+    font-size: 6rem
     line-height: 1
+    margin: 100px
+
 
     // animation: spin 8s linear forwards
 
@@ -262,6 +269,7 @@ body
     justify-content: space-between
     gap: 100px
     flex-grow: 0
+
 .copyright
     display: flex
     flex-direction: row

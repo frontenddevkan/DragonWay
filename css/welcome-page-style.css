@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+a {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
 body {
   height: 100vh;
   margin: 0px;
@@ -37,10 +45,6 @@ body a {
   vertical-align: baseline;
   background: transparent;
 }
-body:hover {
-  border-bottom: 2px solid rgba(249, 31, 64, 0.5490196078);
-  transition: all 0.2;
-}
 body header, body footer, body main {
   width: 100%;
 }
@@ -54,10 +58,12 @@ body header, body footer, body main {
 .logo {
   width: 313px;
   height: 338px;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex-grow: 1;
   margin-top: 81px;
   margin-left: 96px;
 }
@@ -70,27 +76,28 @@ body header, body footer, body main {
 /************** main **************/
 .frame {
   width: 2800px;
-  height: 1700px;
+  height: 1100px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  padding: 180px 70px;
+  padding: 100px;
   background-color: rgba(52, 53, 65, 0.82);
   border-radius: 90px;
   border: solid 3px rgba(249, 31, 64, 0.5490196078);
+}
+.frame__list-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 .frame__list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-  gap: 100px;
-  position: relative;
-  flex-grow: 2;
+  align-content: center;
+  align-items: center;
 }
 
 .items {
@@ -98,16 +105,19 @@ body header, body footer, body main {
 }
 
 .frame__circles {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
   background-color: #444654;
-  text-align: center;
-  padding: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border: 10px dashed rgba(249, 31, 64, 0.5490196078);
   box-shadow: 0 0 26px rgba(249, 31, 64, 0.5490196078);
-  font-size: 2rem;
+  font-size: 6rem;
   line-height: 1;
+  margin: 100px;
 }
 
 /************** footer ***************/
